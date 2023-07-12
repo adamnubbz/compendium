@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Map;
+
 @Document(collection="anime")
 @Data
 @AllArgsConstructor
@@ -12,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Anime {
     Integer mal_id; // "mal_id": 0,
     String url; // "url": "string",
-    //Images images; // "images": {},
+    private Map<String, Object> images;; // "images": {},
     //Trailer trailer; // "trailer": {},
     boolean approved; // "approved": true,
     //Titles titles; // "titles": [],
